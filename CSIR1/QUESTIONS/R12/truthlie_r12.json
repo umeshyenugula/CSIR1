@@ -1,0 +1,62 @@
+[
+   {
+    "id": 1,
+    "statement": "HTML is a programming language.",
+    "options": ["True", "False"],
+    "answer": "False"
+  },
+  {
+    "id": 2,
+    "statement": "CSS is used for designing and styling web pages.",
+    "options": ["True", "False"],
+    "answer": "True"
+  },
+  {
+    "id": 3,
+    "statement": "IPv6 addresses are 32-bit long.",
+    "options": ["True", "False"],
+    "answer": "False"
+  },
+  {
+    "id": 4,
+    "statement": "Polymorphism allows one name to have many forms.",
+    "options": ["True", "False"],
+    "answer": "True"
+  },
+  {
+    "id": 5,
+    "statement": "Encapsulation means hiding implementation details.",
+    "options": ["True", "False"],
+    "answer": "True"
+  },
+  {
+    "id": 6,
+    "statement": "Abstraction and Encapsulation are the same concepts.",
+    "options": ["True", "False"],
+    "answer": "False"
+  },
+  {
+    "id": 7,
+    "statement": "In C, the size of an int is always 2 bytes.",
+    "options": ["True", "False"],
+    "answer": "False"
+  },
+  {
+    "id": 8,
+    "statement": "DNS stands for Domain Name System.",
+    "options": ["True", "False"],
+    "answer": "True"
+  },
+  {
+    "id": 9,
+    "statement": "Primary key in a database can have NULL values.",
+    "options": ["True", "False"],
+    "answer": "False"
+  },
+  {
+    "id": 10,
+    "statement": "A foreign key is used to establish a relationship between tables.",
+    "options": ["True", "False"],
+    "answer": "True"
+  }
+]

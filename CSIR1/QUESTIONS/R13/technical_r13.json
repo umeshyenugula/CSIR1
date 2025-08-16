@@ -1,0 +1,62 @@
+[
+    {
+    "id": 1,
+    "code": "int a = 5;\nint *p = &a;\nprintf(\"%d\", *p);",
+    "options": ["5", "Address", "0", "Compiler Error"],
+    "answer": "5"
+  },
+  {
+    "id": 2,
+    "code": "int arr[5] = {1,2,3,4,5};\nprintf(\"%d\", *(arr+3));",
+    "options": ["3", "4", "5", "2"],
+    "answer": "4"
+  },
+  {
+    "id": 3,
+    "code": "char str[] = \"Hello\";\nprintf(\"%c\", *(str+1));",
+    "options": ["H", "e", "l", "o"],
+    "answer": "e"
+  },
+  {
+    "id": 4,
+    "code": "int a = 5;\nint b = 0;\nprintf(\"%d\", a && b);",
+    "options": ["1", "0", "True", "False"],
+    "answer": "0"
+  },
+  {
+    "id": 5,
+    "code": "int a = 5;\nint b = 0;\nprintf(\"%d\", a || b);",
+    "options": ["1", "0", "True", "False"],
+    "answer": "1"
+  },
+  {
+    "id": 6,
+    "code": "int a = 2;\nint b = 3;\nprintf(\"%d\", a & b);",
+    "options": ["2", "0", "3", "1"],
+    "answer": "2"
+  },
+  {
+    "id": 7,
+    "code": "int a = 2;\nint b = 3;\nprintf(\"%d\", a | b);",
+    "options": ["2", "3", "1", "0"],
+    "answer": "3"
+  },
+  {
+    "id": 8,
+    "code": "int a = 2;\nint b = 3;\nprintf(\"%d\", a ^ b);",
+    "options": ["1", "2", "3", "0"],
+    "answer": "1"
+  },
+  {
+    "id": 9,
+    "code": "int x = 5;\nprintf(\"%d\", x > 2 ? x+1 : x-1);",
+    "options": ["6", "4", "5", "7"],
+    "answer": "6"
+  },
+  {
+    "id": 10,
+    "code": "int a = 1;\nint b = 2;\nprintf(\"%d\", (a==1) && (b==2));",
+    "options": ["1", "0", "True", "False"],
+    "answer": "1"
+  }
+]

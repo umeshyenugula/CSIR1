@@ -1,0 +1,52 @@
+[
+    {
+    "id": 1,
+    "question": "Shortcut key to undo last action",
+    "answer": "Ctrl+Z"
+  },
+  {
+    "id": 2,
+    "question": "The process of hiding internal details",
+    "answer": "Abstraction"
+  },
+  {
+    "id": 3,
+    "question": "The process of binding data and methods",
+    "answer": "Encapsulation"
+  },
+  {
+    "id": 4,
+    "question": "Ability of object to take many forms",
+    "answer": "Polymorphism"
+  },
+  {
+    "id": 5,
+    "question": "Mechanism of acquiring features from another class",
+    "answer": "Inheritance"
+  },
+  {
+    "id": 6,
+    "question": "Data structure used in recursion",
+    "answer": "Stack"
+  },
+  {
+    "id": 7,
+    "question": "Fastest type of memory in a computer",
+    "answer": "Cache"
+  },
+  {
+    "id": 8,
+    "question": "Device used to convert digital signals to analog",
+    "answer": "Modem"
+  },
+  {
+    "id": 9,
+    "question": "Full form of URL",
+    "answer": "Uniform Resource Locator"
+  },
+  {
+    "id": 10,
+    "question": "Protocol used to transfer web pages",
+    "answer": "HTTP"
+  }
+]
