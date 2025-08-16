@@ -7,7 +7,7 @@ def get_random_question(file_path="round1easyquestions.json"):
     with open(file_path, 'r', encoding='utf-8') as fp:
         questions = json.load(fp)
 
-    random_id = random.randrange(1,len(questions)+1)
+    random_id = random.randrange(len(questions))
     selected_question = questions[random_id]
     code= selected_question['code']
     options=selected_question['options']
