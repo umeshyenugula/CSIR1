@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "code": "I have keys but no locks, I can be pressed but not held. What am I?",
+    "options": [
+      "Keyboard",
+      "Piano",
+      "Encryption Key",
+      "Calculator"
+    ],
+    "answer": "Keyboard"
+  },
+  {
+    "id": 2,
+    "code": "The more you use me, the faster I get filled up. Clear me often, or I’ll slow you down. What am I?",
+    "options": [
+      "RAM",
+      "Cache",
+      "Recycle Bin",
+      "Hard Disk"
+    ],
+    "answer": "Cache"
+  },
+  {
+    "id": 3,
+    "code": "I’m invisible, I connect people across the globe. Without me, the web would fall silent. What am I?",
+    "options": [
+      "Wi-Fi",
+      "Optical Fiber",
+      "Bluetooth",
+      "Internet Protocol"
+    ],
+    "answer": "Wi-Fi"
+  },
+  {
+    "id": 4,
+    "code": "I start with a bug and end with a fix. What am I?",
+    "options": [
+      "Debugging",
+      "Testing",
+      "Compiling",
+      "Coding"
+    ],
+    "answer": "Debugging"
+  },
+  {
+    "id": 5,
+    "code": "I run without legs, I store without a box, I process without a brain. What am I?",
+    "options": [
+      "Computer",
+      "Cloud Server",
+      "Operating System",
+      "Processor"
+    ],
+    "answer": "Computer"
+  }
+]

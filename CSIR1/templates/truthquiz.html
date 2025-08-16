@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Truth Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f2f2;
+      text-align: center;
+    }
+    .header {
+      background: #cfc9c9;
+      padding: 20px;
+      font-size: 2rem;
+      color: #0c056d;
+      font-weight: bold;
+    }
+    .question-box {
+      width: 60%;
+      margin: 30px auto;
+      background: linear-gradient(to bottom, #fffdf7, #dedcd1);
+      padding: 60px;
+      border-radius: 20px;
+      text-align: left;
+    }
+    .question {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      white-space: pre-wrap;
+    }
+    .options label {
+      display: block;
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+    .footer {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-around;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .button, .timer {
+      background: #d1caca;
+      border-radius: 20px;
+      padding: 12px 35px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">Truth Round - Code Quiz</div>
+
+<div class="question-box">
+  <div class="question" id="questionText">Loading...</div>
+  <form id="questionForm">
+    <div class="options" id="optionsList"></div>
+  </form>
+</div>
+
+<div class="footer">
+  <div class="timer" id="timer">Time Left: 45</div>
+  <button class="button" onclick="submitAnswer()">Submit</button>
+</div>
+
+<div id="resultBox" style="display: none;">
+  <div id="resultHeader" style="background: #ccc; padding: 20px; font-size: 2rem; font-weight: bold; color: white;">
+    Result Of the Question.
+  </div>
+  <div style="margin-top: 40px;">
+    <div style="margin: 0 auto; width: 60%; background: linear-gradient(to bottom, #fffdf7, #dedcd1); padding: 60px; border-radius: 25px; font-size: 2rem; font-weight: bold; color: #444;" id="resultMessage">
+      {{Result}}
+    </div>
+  </div>
+  <br>
+  <button class="button" onclick="window.location.href='/return'">Return to Dashboard</button>
+</div>
+
+<script>
+  const TOTAL_TIME = 45;
+  const TIMER_KEY = "truth_timer_start";
+
+  let timer;
+  let timeLeft = TOTAL_TIME;
+
+  function startTimer(startTime) {
+    clearInterval(timer);
+    timer = setInterval(() => {
+      const now = Date.now();
+      const elapsed = Math.floor((now - startTime) / 1000);
+      timeLeft = TOTAL_TIME - elapsed;
+
+      document.getElementById('timer').textContent = `Time Left: ${timeLeft}`;
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        submitAnswer();
+      }
+    }, 1000);
+  }
+
+  function loadQuestion() {
+    fetch('/truth/get-question')
+      .then(res => res.json())
+      .then(data => {
+        const formatted = data.question.replace(/\n/g, "<br>");
+        document.getElementById('questionText').innerHTML = formatted;
+
+        const optionsHTML = data.options.map(opt => `
+          <label>
+            <input type="radio" name="answer" value="${opt}"> ${opt}
+          </label>
+        `).join('');
+        document.getElementById('optionsList').innerHTML = optionsHTML;
+
+        let startTime = localStorage.getItem(TIMER_KEY);
+        if (!startTime) {
+          startTime = Date.now();
+          localStorage.setItem(TIMER_KEY, startTime);
+        } else {
+          startTime = parseInt(startTime, 10);
+        }
+        startTimer(startTime);
+      });
+  }
+
+  function submitAnswer() {
+  clearInterval(timer);
+  localStorage.removeItem(TIMER_KEY);
+
+  const selected = document.querySelector('input[name="answer"]:checked');
+  const answer = selected ? selected.value : null;
+  if (!answer) {
+    alert("Please select one of the options before submitting.");
+    return;
+  }
+
+  fetch('/truth/submit', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({ answer: answer })
+  })
+  .then(res => res.json())
+  .then(response => {
+    const result = response.result;
+
+    playBeep();
+
+    let message = '';
+    let color = '';
+
+    if (result === "correct") {
+      message = "You Got it Correct!";
+      color = "green";
+    } else if (result === "wrong") {
+      message = "You Got it Wrong!";
+      color = "red";
+    } else {
+      message = "Time's Up!";
+      color = "gray";
+    }
+
+    document.querySelector('.question-box').style.display = "none";
+    document.querySelector('.footer').style.display = "none";
+    document.getElementById('resultBox').style.display = "block";
+    document.getElementById('resultHeader').style.backgroundColor = color;
+    document.getElementById('resultMessage').style.color = color;
+    document.getElementById('resultMessage').textContent = message;
+  });
+}
+
+ function playBeep() {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(800, audioCtx.currentTime); 
+    gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime); 
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+
+    oscillator.start();
+    oscillator.stop(audioCtx.currentTime + 0.3); 
+  }
+  loadQuestion();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reverse Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f2f2;
+      text-align: center;
+    }
+    .header {
+      background: #cfc9c9;
+      padding: 20px;
+      font-size: 2rem;
+      color: #0c056d;
+      font-weight: bold;
+    }
+    .question-box {
+      width: 60%;
+      margin: 30px auto;
+      background: linear-gradient(to bottom, #fffdf7, #dedcd1);
+      padding: 60px;
+      border-radius: 20px;
+      text-align: left;
+    }
+    .question {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      white-space: pre-wrap;
+    }
+    .input-box {
+      margin-top: 20px;
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+    }
+    .footer {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    .button, .timer {
+      background: #d1caca;
+      border-radius: 20px;
+      padding: 12px 35px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">Reverse Round</div>
+
+<div class="question-box">
+  <div class="question" id="questionText">Loading...</div>
+  <div class="input-box">
+    <input type="text" id="answerInput" placeholder="Type your answer here..." />
+  </div>
+</div>
+
+<div class="footer">
+  <div class="timer" id="timer">Time Left: 45</div>
+  <button class="button" onclick="submitAnswer()">Submit</button>
+</div>
+
+<div id="resultBox" style="display: none;">
+  <div id="resultHeader" style="background: #ccc; padding: 20px; font-size: 2rem; font-weight: bold; color: white;">
+    Result Of the Question.
+  </div>
+  <div style="margin-top: 40px;">
+    <div style="margin: 0 auto; width: 60%; background: linear-gradient(to bottom, #fffdf7, #dedcd1); padding: 60px; border-radius: 25px; font-size: 2rem; font-weight: bold; color: #444;" id="resultMessage">
+      {{Result}}
+    </div>
+  </div>
+  <br>
+  <button class="button" onclick="window.location.href='/return'">Return to Dashboard</button>
+</div>
+
+<script>
+  const TOTAL_TIME = 45;
+  const TIMER_KEY = "reverse_timer_start";
+  let timer;
+  let timeLeft = TOTAL_TIME;
+
+  function startTimer(startTime) {
+    clearInterval(timer);
+    timer = setInterval(() => {
+      const now = Date.now();
+      const elapsed = Math.floor((now - startTime) / 1000);
+      timeLeft = TOTAL_TIME - elapsed;
+      document.getElementById('timer').textContent = `Time Left: ${timeLeft}`;
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        submitAnswer(true); 
+      }
+    }, 1000);
+  }
+
+  function loadQuestion() {
+    fetch('/reverse/get-question')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('questionText').textContent = data.question;
+
+        let startTime = localStorage.getItem(TIMER_KEY);
+        if (!startTime) {
+          startTime = Date.now();
+          localStorage.setItem(TIMER_KEY, startTime);
+        } else {
+          startTime = parseInt(startTime, 10);
+        }
+        startTimer(startTime);
+      });
+  }
+
+  function playBeep() {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+
+    const oscillator = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(800, audioCtx.currentTime); 
+    gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime); 
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+
+    oscillator.start();
+    oscillator.stop(audioCtx.currentTime + 0.3); 
+  }
+
+  function submitAnswer(isTimeout = false) {
+    clearInterval(timer);
+    localStorage.removeItem(TIMER_KEY);
+
+    let answer = document.getElementById('answerInput').value.trim();
+
+    if (!answer && !isTimeout) {
+      alert("Please enter an answer before submitting.");
+      return;
+    }
+
+    fetch('/reverse/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ answer: answer, timeout: isTimeout })
+    })
+    .then(res => res.json())
+    .then(response => {
+      const result = response.result;
+      playBeep();
+
+      let message = '';
+      let color = '';
+
+      if (result === "correct") {
+        message = "You Got it Correct!";
+        color = "green";
+      } else if (result === "wrong") {
+        message = "You Got it Wrong!";
+        color = "red";
+      } else {
+        message = "Time's Up!";
+        color = "gray";
+      }
+
+      document.querySelector('.question-box').style.display = "none";
+      document.querySelector('.footer').style.display = "none";
+      document.getElementById('resultBox').style.display = "block";
+      document.getElementById('resultHeader').style.backgroundColor = color;
+      document.getElementById('resultMessage').style.color = color;
+      document.getElementById('resultMessage').textContent = message;
+    });
+  }
+  document.addEventListener('click', () => {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    if (ctx.state === 'suspended') ctx.resume();
+  }, { once: true });
+
+  loadQuestion();
+</script>
+
+</body>
+</html>
