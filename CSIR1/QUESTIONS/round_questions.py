@@ -15,15 +15,17 @@ def copy_round_files(round_name: str) :
     for filename in os.listdir(source_dir):
         if filename.endswith('.json'):
             source_path = os.path.join(source_dir, filename)
-            dest_path = os.path.join(CURRENT_QUESTIONS_DIR, filename)
+            dest_filename = filename
+            name_part, ext_part = os.path.splitext(filename)
+            dest_filename = name_part[:-4] + ext_part
+
+            dest_path = os.path.join(CURRENT_QUESTIONS_DIR, dest_filename)
             shutil.copy2(source_path, dest_path)
-            print(f"  - Copied: {filename}")
             copied_count += 1
     print(f"Successfully copied {copied_count} JSON files for round '{round_name}'.")
 
 if __name__ == "__main__":
-    selected_round = "R12"
-    print(f"\n--- Copying Round: {selected_round} ---")
+    selected_round = "R13"
     copy_round_files(selected_round)
         
     
