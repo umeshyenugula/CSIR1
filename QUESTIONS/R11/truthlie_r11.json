@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "Arrays offer O(1) access time for elements.",
+      "Linked lists provide O(1) insertion/deletion at any position given the node.",
+      "Searching for an element in an unsorted array is always O(log n)."
+    ],
+    "answer": "Searching for an element in an unsorted array is always O(log n)."
+  },
+  {
+    "id": 2,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "A Stack follows the Last-In, First-Out (LIFO) principle.",
+      "A Queue follows the First-In, First-Out (FIFO) principle.",
+      "Both Stacks and Queues are considered non-linear data structures."
+    ],
+    "answer": "Both Stacks and Queues are considered non-linear data structures."
+  },
+  {
+    "id": 3,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "A binary tree node can have at most two children.",
+      "In a Binary Search Tree (BST), all nodes in the left subtree are less than the root.",
+      "A leaf node in any tree must have at least one child."
+    ],
+    "answer": "A leaf node in any tree must have at least one child."
+  },
+  {
+    "id": 4,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "Breadth-First Search (BFS) uses a queue to explore vertices.",
+      "Depth-First Search (DFS) uses a stack to explore vertices.",
+      "BFS explores as far as possible along each branch before backtracking."
+    ],
+    "answer": "BFS explores as far as possible along each branch before backtracking."
+  },
+  {
+    "id": 5,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "Merge Sort has a worst-case time complexity of O(n log n).",
+      "Quick Sort has an average-case time complexity of O(n log n).",
+      "Bubble Sort is generally the most efficient sorting algorithm for large datasets."
+    ],
+    "answer": "Bubble Sort is generally the most efficient sorting algorithm for large datasets."
+  },
+  {
+    "id": 6,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "Hash tables provide average O(1) time complexity for search operations.",
+      "In a balanced binary search tree, operations take O(log n) time.",
+      "A queue allows direct access to any element at any position."
+    ],
+    "answer": "A queue allows direct access to any element at any position."
+  },
+  {
+    "id": 7,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "Dynamic programming is used to optimize problems with overlapping subproblems.",
+      "Greedy algorithms always provide an optimal solution for all problems.",
+      "Divide and conquer algorithms break problems into smaller subproblems."
+    ],
+    "answer": "Greedy algorithms always provide an optimal solution for all problems."
+  },
+  {
+    "id": 8,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "In a max heap, the root node contains the maximum element.",
+      "Heaps are often used to implement priority queues.",
+      "A binary heap is always a complete binary tree but not necessarily balanced."
+    ],
+    "answer": "A binary heap is always a complete binary tree but not necessarily balanced."
+  },
+  {
+    "id": 9,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "Depth-First Search can be implemented using recursion or a stack.",
+      "Breadth-First Search uses a stack data structure for traversal.",
+      "DFS can get stuck in infinite loops without visited node tracking."
+    ],
+    "answer": "Breadth-First Search uses a stack data structure for traversal."
+  },
+  {
+    "id": 10,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "Big O notation describes the worst-case time complexity.",
+      "Constant time complexity is denoted as O(1).",
+      "Algorithms with exponential time complexity are efficient for large inputs."
+    ],
+    "answer": "Algorithms with exponential time complexity are efficient for large inputs."
+  }
+]

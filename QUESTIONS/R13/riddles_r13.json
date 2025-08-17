@@ -1,0 +1,62 @@
+[
+    {
+    "id": 1,
+    "code": "I shrink when I work and grow when I rest. What am I?",
+    "options": ["Soap", "Ice", "Pencil", "Battery"],
+    "answer": "Soap"
+  },
+  {
+    "id": 2,
+    "code": "I have one eye but can’t see. What am I?",
+    "options": ["Needle", "Storm", "Camera", "Cyclops"],
+    "answer": "Needle"
+  },
+  {
+    "id": 3,
+    "code": "I’m always hungry but must be fed. The more I eat, the more I grow. What am I?",
+    "options": ["Fire", "Machine", "Time", "Virus"],
+    "answer": "Fire"
+  },
+  {
+    "id": 4,
+    "code": "The more you wash me, the dirtier I get. What am I?",
+    "options": ["Water", "Soap", "Towel", "Sponge"],
+    "answer": "Water"
+  },
+  {
+    "id": 5,
+    "code": "I’m invisible but can make you move. What am I?",
+    "options": ["Wind", "Gravity", "Magnetism", "Air"],
+    "answer": "Wind"
+  },
+  {
+    "id": 6,
+    "code": "I’m always ahead of you but never behind. What am I?",
+    "options": ["Future", "Horizon", "Shadow", "Goal"],
+    "answer": "Future"
+  },
+  {
+    "id": 7,
+    "code": "I get sharper the more you use me. What am I?",
+    "options": ["Brain", "Knife", "Pencil", "Skill"],
+    "answer": "Brain"
+  },
+  {
+    "id": 8,
+    "code": "I’m measured in hours but serve by seconds. What am I?",
+    "options": ["Clock", "Watch", "Timer", "Stopwatch"],
+    "answer": "Watch"
+  },
+  {
+    "id": 9,
+    "code": "I run but have no legs. What am I?",
+    "options": ["River", "Computer", "Clock", "Water"],
+    "answer": "River"
+  },
+  {
+    "id": 10,
+    "code": "I have a neck but no head. What am I?",
+    "options": ["Bottle", "Shirt", "Vase", "Guitar"],
+    "answer": "Bottle"
+  }
+]

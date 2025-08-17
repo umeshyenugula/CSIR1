@@ -1,0 +1,62 @@
+[
+   {
+    "id": "1",
+    "image": "static/images/Snowman.png",
+    "options": ["Snowball", "Snowman", "Igloo", "Santa"],
+    "answer": "Snowman"
+  },
+  {
+    "id": "2",
+    "image": "static/images/Handshake.png",
+    "options": ["Hug", "Handshake", "Clap", "High Five"],
+    "answer": "Handshake"
+  },
+  {
+    "id": "3",
+    "image": "static/images/Pineapple.png",
+    "options": ["Mango", "Pineapple", "Papaya", "Coconut"],
+    "answer": "Pineapple"
+  },
+  {
+    "id": "4",
+    "image": "static/images/Blackboard.png",
+    "options": ["Noticeboard", "Whiteboard", "Blackboard", "Signboard"],
+    "answer": "Blackboard"
+  },
+  {
+    "id": "5",
+    "image": "static/images/NotebookComputer.png",
+    "options": ["Laptop", "Desktop", "Notebook Computer", "Server"],
+    "answer": "Notebook Computer"
+  },
+  {
+    "id": "6",
+    "image": "static/images/Goldfish.png",
+    "options": ["Shark", "Goldfish", "Whale", "Clownfish"],
+    "answer": "Goldfish"
+  },
+  {
+    "id": "7",
+    "image": "static/images/Rainbow.png",
+    "options": ["Rainbow", "Aurora", "Sunset", "Light Beam"],
+    "answer": "Rainbow"
+  },
+  {
+    "id": "8",
+    "image": "static/images/Newspaper.png",
+    "options": ["Magazine", "Notebook", "Newspaper", "Pamphlet"],
+    "answer": "Newspaper"
+  },
+  {
+    "id": "9",
+    "image": "static/images/Headlight.png",
+    "options": ["Lamp", "Torch", "Headlight", "Candle"],
+    "answer": "Headlight"
+  },
+  {
+    "id": "10",
+    "image": "static/images/Sunglasses.png",
+    "options": ["Spectacles", "Goggles", "Sunglasses", "Monocle"],
+    "answer": "Sunglasses"
+  }
+]

@@ -1,0 +1,62 @@
+[
+    {
+    "id": 1,
+    "code": "I can be cracked, made, told, and played. What am I?",
+    "options": ["Joke", "Password", "Egg", "Code"],
+    "answer": "Joke"
+  },
+  {
+    "id": 2,
+    "code": "I’m light as a feather but even the strongest person can’t hold me. What am I?",
+    "options": ["Breath", "Bubble", "Cloud", "Air"],
+    "answer": "Breath"
+  },
+  {
+    "id": 3,
+    "code": "I speak without a mouth and hear without ears. What am I?",
+    "options": ["Echo", "Radio", "AI", "Shadow"],
+    "answer": "Echo"
+  },
+  {
+    "id": 4,
+    "code": "The more of me you take away, the more I remain. What am I?",
+    "options": ["Shadow", "Hole", "Silence", "Darkness"],
+    "answer": "Silence"
+  },
+  {
+    "id": 5,
+    "code": "I am always in front of you but can’t be seen. What am I?",
+    "options": ["Future", "Air", "Shadow", "Dream"],
+    "answer": "Future"
+  },
+  {
+    "id": 6,
+    "code": "I’m always coming but never arrive. What am I?",
+    "options": ["Tomorrow", "Bus", "Future", "Hope"],
+    "answer": "Tomorrow"
+  },
+  {
+    "id": 7,
+    "code": "I have branches but no fruit, trunk, or leaves. What am I?",
+    "options": ["Bank", "River", "Library", "Company"],
+    "answer": "Bank"
+  },
+  {
+    "id": 8,
+    "code": "The more you remove from me, the bigger I get. What am I?",
+    "options": ["Hole", "Memory", "Cloud", "Shadow"],
+    "answer": "Hole"
+  },
+  {
+    "id": 9,
+    "code": "I am bought by the yard but worn by the foot. What am I?",
+    "options": ["Carpet", "Shoes", "Clothes", "Thread"],
+    "answer": "Carpet"
+  },
+  {
+    "id": 10,
+    "code": "I am black when clean and white when dirty. What am I?",
+    "options": ["Chalkboard", "Paper", "Mirror", "Towel"],
+    "answer": "Chalkboard"
+  }
+]

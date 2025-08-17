@@ -1,0 +1,90 @@
+[
+    {
+        "id": "1",
+        "image": "static/images/Keychain.png",
+        "options": [
+            "Necklace",
+            "Keychain",
+            "Bracelet",
+            "Lock"
+        ],
+        "answer": "Keychain"
+    },
+    {
+        "id": "3",
+        "image": "static/images/Notebook.png",
+        "options": [
+            "Diary",
+            "Notebook",
+            "Newspaper",
+            "Calendar"
+        ],
+        "answer": "Notebook"
+    },
+    {
+        "id": "4",
+        "image": "static/images/Earphone.png",
+        "options": [
+            "Speaker",
+            "Earphone",
+            "Headset",
+            "Radio"
+        ],
+        "answer": "Earphone"
+    },
+    {
+        "id": "5",
+        "image": "static/images/Football.png",
+        "options": [
+            "Cricket Ball",
+            "Football",
+            "Tennis Ball",
+            "Volleyball"
+        ],
+        "answer": "Football"
+    },
+    {
+        "id": "6",
+        "image": "static/images/Raincoat.png",
+        "options": [
+            "Raincoat",
+            "Jacket",
+            "Umbrella",
+            "Poncho"
+        ],
+        "answer": "Raincoat"
+    },
+    {
+        "id": "7",
+        "image": "static/images/Keyboard.png",
+        "options": [
+            "Typewriter",
+            "Piano",
+            "Keyboard",
+            "Calculator"
+        ],
+        "answer": "Keyboard"
+    },
+    {
+        "id": "8",
+        "image": "static/images/BlueTooth.png",
+        "options": [
+            "Wi-Fi",
+            "Bluetooth",
+            "Infrared",
+            "Radio"
+        ],
+        "answer": "Bluetooth"
+    },
+    {
+        "id": "9",
+        "image": "static/images/Smartphone.png",
+        "options": [
+            "Tablet",
+            "Smartphone",
+            "Walkie Talkie",
+            "Pager"
+        ],
+        "answer": "Smartphone"
+    }
+]

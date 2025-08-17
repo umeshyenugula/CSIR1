@@ -1,0 +1,101 @@
+[
+    {
+        "id": 1,
+        "code": "int x = 5, y = 10;\nprintf(\"%d\", x+++y);",
+        "options": [
+            "15",
+            "16",
+            "Compilation Error",
+            "11"
+        ],
+        "answer": "15"
+    },
+    {
+        "id": 3,
+        "code": "int x = 10;\nprintf(\"%d\", x+++x);",
+        "options": [
+            "20",
+            "21",
+            "19",
+            "Compiler Error"
+        ],
+        "answer": "21"
+    },
+    {
+        "id": 4,
+        "code": "int a = 3, b = 5;\nprintf(\"%d\", a+++++b);",
+        "options": [
+            "8",
+            "9",
+            "Compiler Error",
+            "7"
+        ],
+        "answer": "8"
+    },
+    {
+        "id": 5,
+        "code": "printf(\"%d\", sizeof(char));",
+        "options": [
+            "1",
+            "2",
+            "4",
+            "Compiler Error"
+        ],
+        "answer": "1"
+    },
+    {
+        "id": 6,
+        "code": "printf(\"%d\", sizeof('A'));",
+        "options": [
+            "1",
+            "2",
+            "4",
+            "Compiler Error"
+        ],
+        "answer": "4"
+    },
+    {
+        "id": 7,
+        "code": "int x = 5;\nprintf(\"%d\", ++x * x++);",
+        "options": [
+            "30",
+            "25",
+            "36",
+            "Compiler Error"
+        ],
+        "answer": "36"
+    },
+    {
+        "id": 8,
+        "code": "int x = 0;\nif(x = 5) printf(\"True\"); else printf(\"False\");",
+        "options": [
+            "True",
+            "False",
+            "Compiler Error",
+            "Runtime Error"
+        ],
+        "answer": "True"
+    },
+    {
+        "id": 9,
+        "code": "int x = 0;\nif(x == 5) printf(\"True\"); else printf(\"False\");",
+        "options": [
+            "True",
+            "False",
+            "Compiler Error",
+            "Runtime Error"
+        ],
+        "answer": "False"
+    },
+    {
+        "id": 10,
+        "code": "int a = 5;\nprintf(\"%d\", a++ + a++);",
+        "options": [
+            "11",
+            "10",
+            "12",
+            "Compiler Error"
+        ],
+        "answer": "11"
+    }
+]
