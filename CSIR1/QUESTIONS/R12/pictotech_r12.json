@@ -1,61 +1,61 @@
 [
   {
     "id": "1",
-    "image": "static/images/AppleWatch.png",
-    "options": ["Smartwatch", "Apple Watch", "Wall Clock", "Wristband"],
-    "answer": "Apple Watch"
+    "image": "static/imagesR12/AppleWatch.png",
+    "options": ["Smartwatch", "AppleWatch", "Wall Clock", "Wristband"],
+    "answer": "AppleWatch"
   },
   {
     "id": "2",
-    "image": "static/images/Firefly.png",
+    "image": "static/imagesR12/Firefly.png",
     "options": ["Butterfly", "Firefly", "Dragonfly", "Beetle"],
     "answer": "Firefly"
   },
   {
     "id": "3",
-    "image": "static/images/Dragonfruit.png",
+    "image": "static/imagesR12/Dragonfruit.png",
     "options": ["Kiwi", "Papaya", "Dragonfruit", "Pineapple"],
     "answer": "Dragonfruit"
   },
   {
     "id": "4",
-    "image": "static/images/Starfish.png",
+    "image": "static/imagesR12/Starfish.png",
     "options": ["Octopus", "Starfish", "Crab", "Jellyfish"],
     "answer": "Starfish"
   },
   {
     "id": "5",
-    "image": "static/images/Headphone.png",
+    "image": "static/imagesR12/Headphone.png",
     "options": ["Speaker", "Headphone", "Earbuds", "Microphone"],
     "answer": "Headphone"
   },
   {
     "id": "6",
-    "image": "static/images/Teapot.png",
+    "image": "static/imagesR12/Teapot.png",
     "options": ["Coffee Mug", "Teapot", "Kettle", "Flask"],
     "answer": "Teapot"
   },
   {
     "id": "7",
-    "image": "static/images/Moonlight.png",
+    "image": "static/imagesR12/Moonlight.png",
     "options": ["Starlight", "Moonlight", "Daylight", "Twilight"],
     "answer": "Moonlight"
   },
   {
     "id": "8",
-    "image": "static/images/Basketball.png",
+    "image": "static/imagesR12/Basketball.png",
     "options": ["Football", "Tennis", "Basketball", "Hockey Ball"],
     "answer": "Basketball"
   },
   {
     "id": "9",
-    "image": "static/images/Waterfall.png",
+    "image": "static/imagesR12/Waterfall.png",
     "options": ["Waterdrop", "Rainfall", "Waterfall", "Stream"],
     "answer": "Waterfall"
   },
   {
     "id": "10",
-    "image": "static/images/Laptop.png",
+    "image": "static/imagesR12/Laptop.png",
     "options": ["Laptop", "Tablet", "Monitor", "Keyboard"],
     "answer": "Laptop"
   }
