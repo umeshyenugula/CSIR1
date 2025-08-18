@@ -1,0 +1,62 @@
+[
+  {
+    "id": 11,
+    "image": "static/images/11.jpg",
+    "answer": "Quicksort",
+    "options": ["Quicksort", "Mergesort", "Radix Sort", "Bubble Sort"]
+  },
+  {
+    "id": 12,
+    "image": "static/images/12.jpg",
+    "answer": "Mergesort",
+    "options": ["Mergesort", "Heapsort", "Selection Sort", "Insertion Sort"]
+  },
+  {
+    "id": 13,
+    "image": "static/images/13.jpg",
+    "answer": "Linear Search",
+    "options": ["Linear Search", "Binary Search", "Hashing", "Sorting"]
+  },
+  {
+    "id": 14,
+    "image": "static/images/14.jpg",
+    "answer": "Network",
+    "options": ["Network", "Server", "Router", "Protocol"]
+  },
+  {
+    "id": 15,
+    "image": "static/images/15.jpg",
+    "answer": "Search Engine",
+    "options": ["Search Engine", "Web Browser", "Operating System", "Database"]
+  },
+  {
+    "id": 16,
+    "image": "static/images/16.jpg",
+    "answer": "ClipBoard",
+    "options": ["Clipboard", "Cache", "RAM", "Storage"]
+  },
+  {
+    "id": 17,
+    "image": "static/images/17.jpg",
+    "answer": "typedef",
+    "options": ["typedef", "struct", "union", "enum"]
+  },
+  {
+    "id": 18,
+    "image": "static/images/18.jpg",
+    "answer": "Acyclicgraph",
+    "options": ["Acyclicgraph", "Cyclic Graph", "Tree", "Linked List"]
+  },
+  {
+    "id": 19,
+    "image": "static/images/19.jpg",
+    "answer": "Flowchart",
+    "options": ["Flowchart", "Pseudocode", "UML Diagram", "ER Diagram"]
+  },
+  {
+    "id": 20,
+    "image": "static/images/20.jpg",
+    "answer": "Syntax",
+    "options": ["Syntax", "Semantics", "Grammar", "Compiler"]
+  }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "code": "Identify the false statement in the following.",
+        "options": [
+            "printf() is used to display output in C.",
+            "scanf() can be used to read both strings and integers.",
+            "C allows variable names to start with a digit."
+        ],
+        "answer": "C allows variable names to start with a digit."
+    },
+    {
+        "id": 2,
+        "code": "Identify the false statement in the following.",
+        "options": [
+            "main() is the starting point of every C program.",
+            "The #include directive is processed by the compiler.",
+            "Comments in C can be written using /* ... */."
+        ],
+        "answer": "The #include directive is processed by the compiler."
+    },
+    {
+        "id": 3,
+        "code": "Identify the false statement in the following.",
+        "options": [
+            "In C, char data type is used to store a single character.",
+            "The %d format specifier is used for integers in printf.",
+            "The float data type is used to store only whole numbers."
+        ],
+        "answer": "The float data type is used to store only whole numbers."
+    },
+    {
+        "id": 4,
+        "code": "Identify the false statement in the following.",
+        "options": [
+            "In C, && is the logical AND operator.",
+            "The = operator is used for comparison between two values.",
+            "The || operator represents logical OR."
+        ],
+        "answer": "The = operator is used for comparison between two values."
+    },
+    {
+        "id": 5,
+        "code": "Identify the false statement in the following.",
+        "options": [
+            "Array indexing in C starts from 0.",
+            "Strings in C are arrays of characters ending with a null character \\0.",
+            "The size of an array in C can be changed after declaration."
+        ],
+        "answer": "The size of an array in C can be changed after declaration."
+    },
+    {
+        "id": 6,
+        "code": "Identify the false statement in the following.",
+        "options": [
+            "The keyword int declares an integer variable.",
+            "C is a case-insensitive language.",
+            "Variables must be declared before they are used."
+        ],
+        "answer": "C is a case-insensitive language."
+    },
+    {
+        "id": 7,
+        "code": "Identify the false statement in the following.",
+        "options": [
+            "The sizeof() operator returns the size of a variable in bytes.",
+            "break can be used to exit from a loop.",
+            "continue ends the program execution immediately."
+        ],
+        "answer": "continue ends the program execution immediately."
+    },
+    {
+        "id": 8,
+        "code": "Identify the false statement in the following.",
+        "options": [
+            "getch() is part of the standard C library <conio.h>.",
+            "return 0; in main() indicates successful execution.",
+            "printf is a keyword in C."
+        ],
+        "answer": "printf is a keyword in C."
+    },
+    {
+        "id": 9,
+        "code": "Identify the false statement in the following.",
+        "options": [
+            "while loops execute as long as the condition is true.",
+            "do-while loops check the condition before executing the body.",
+            "for loops can have multiple expressions in their initialization or update part."
+        ],
+        "answer": "do-while loops check the condition before executing the body."
+    }
+]

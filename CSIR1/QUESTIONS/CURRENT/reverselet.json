@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "question": "nufcotni - Block of reusable code",
+        "answer": "function"
+    },
+    {
+        "id": 3,
+        "question": "savelabri - Named data holders",
+        "answer": "variables"
+    },
+    {
+        "id": 4,
+        "question": "tigreen - Whole number data type",
+        "answer": "integer"
+    },
+    {
+        "id": 5,
+        "question": "temarapre - Input to a function",
+        "answer": "parameter"
+    },
+    {
+        "id": 6,
+        "question": "crustt - Custom data grouping",
+        "answer": "struct"
+    },
+    {
+        "id": 7,
+        "question": "ribylar - Collection of functions",
+        "answer": "library"
+    },
+    {
+        "id": 8,
+        "question": "tponier - Stores address of a variable",
+        "answer": "pointer"
+    },
+    {
+        "id": 9,
+        "question": "tnacotsn - Value that cannot be changed",
+        "answer": "constant"
+    },
+    {
+        "id": 10,
+        "question": "ernurt - Sends a value back from a function",
+        "answer": "return"
+    },
+    {
+        "id": 11,
+        "question": "ehrdae - Defines structure of functions/data in files",
+        "answer": "header"
+    },
+    {
+        "id": 12,
+        "question": "loobena - Logical true/false type in C99",
+        "answer": "boolean"
+    }
+]

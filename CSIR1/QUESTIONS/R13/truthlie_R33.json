@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "#include <stdio.h> is needed for printf and scanf.",
+      "<stdio.h> stands for standard input-output header.",
+      "<stdio.h> is part of the runtime library only."
+    ],
+    "answer": "<stdio.h> is part of the runtime library only."
+  },
+  {
+    "id": 2,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "break can be used in both loops and switch statements.",
+      "continue can be used in switch statements.",
+      "continue skips the rest of the loop’s body for that iteration."
+    ],
+    "answer": "continue can be used in switch statements."
+  },
+  {
+    "id": 3,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "A char variable in C is stored as an integer internally.",
+      "ASCII is commonly used to represent characters in C.",
+      "C uses Unicode by default for characters."
+    ],
+    "answer": "C uses Unicode by default for characters."
+  },
+  {
+    "id": 4,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "The goto statement changes the flow of control unconditionally.",
+      "Using goto is generally discouraged for readability.",
+      "goto can jump to another function directly."
+    ],
+    "answer": "goto can jump to another function directly."
+  },
+  {
+    "id": 5,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "The default value of an uninitialized local variable is zero.",
+      "Uninitialized global variables are set to zero by default.",
+      "Declaring a variable without initialization is allowed in C."
+    ],
+    "answer": "The default value of an uninitialized local variable is zero."
+  },
+  {
+    "id": 6,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "enum is used to create named integer constants.",
+      "enum members are assigned integer values starting from 1 by default.",
+      "enum improves code readability."
+    ],
+    "answer": "enum members are assigned integer values starting from 1 by default."
+  },
+  {
+    "id": 7,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "register keyword suggests storing a variable in CPU registers.",
+      "register variables can have their address taken using &.",
+      "Register storage is faster than memory access."
+    ],
+    "answer": "register variables can have their address taken using &."
+  },
+  {
+    "id": 8,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "typedef can be used to create aliases for data types.",
+      "typedef changes how the compiler stores the data.",
+      "typedef unsigned int uint; creates a type name uint."
+    ],
+    "answer": "typedef changes how the compiler stores the data."
+  },
+  {
+    "id": 9,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "In C, functions can be recursive.",
+      "Recursive functions must always have a base case to prevent infinite calls.",
+      "Recursive functions cannot call themselves directly."
+    ],
+    "answer": "Recursive functions cannot call themselves directly."
+  },
+  {
+    "id": 10,
+    "code": "Identify the false statement in the following.",
+    "options": [
+      "extern keyword is used to declare a variable defined elsewhere.",
+      "extern allocates memory for the variable.",
+      "extern is useful for sharing variables across multiple files."
+    ],
+    "answer": "extern allocates memory for the variable."
+  }
+]

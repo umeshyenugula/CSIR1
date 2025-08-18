@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "code": "int arr[] = {10, 20, 30, 40};\nint *p = arr + 2;\nprint(*(p - 1) + *(p + 1));",
+        "options": ["50","60","70","40"],
+        "answer": "60"
+    },
+    {
+        "id": 2,
+        "code": "char str[] = \"ABCD\";\nprint(sizeof(str));",
+        "options": ["4","5","6","Depends"],
+        "answer": "5"
+    },
+    {
+        "id": 3,
+        "code": "int x = 3, y = 4;\nprint(x++ * ++y + y);",
+        "options": ["20","19","24","21"],
+        "answer": "20"
+    },
+    {
+        "id": 4,
+        "code": "int a = 5;\nprint(a+++a);",
+        "options": ["10","11","9","Undefined behavior"],
+        "answer": "Undefined behavior"
+    },
+    {
+        "id": 5,
+        "code": "int a = 1, b = 2, c = 3;\nprint(a < b ? b < c ? c : b : a);",
+        "options": ["3","2","1","Error"],
+        "answer": "3"
+    },
+    {
+        "id": 6,
+        "code": "int arr[] = {1, 2, 3, 4, 5};\nprint(*(arr + 3) - arr[1]);",
+        "options": ["1","2","3","4"],
+        "answer": "2"
+    },
+    {
+        "id": 7,
+        "code": "int x = 10;\nif (x-- > 10 && ++x < 10)\n    print(\"Yes\");\nelse\n    print(\"No\");",
+        "options": ["Yes","No","Error","Undefined"],
+        "answer": "No"
+    },
+    {
+        "id": 8,
+        "code": "int x = 2;\nx = x << x;\nprint(x);",
+        "options": ["4","8","16","2"],
+        "answer": "8"
+    },
+    {
+        "id": 9,
+        "code": "int a = 2;\nfor (int i = 0; i < 3; i++)\n    a += a;\nprint(a);",
+        "options": ["8","10","16","Undefined"],
+        "answer": "16"
+    },
+    {
+        "id": 10,
+        "code": "int a = 3, b = 4;\nprintf(\"%d\\n\", a++ + b);\nprintf(\"%d %d\\n\", a, b);",
+        "options": ["7\\n3 4","7\\n4 4","8\\n4 4","8\\n3 4"],
+        "answer": "7\\n4 4"
+    },
+    {
+        "id": 11,
+        "code": "int a = 2, b = 6;\nprint(a * b + (a++ - --b));",
+        "options": ["varies","12","Error","Undefined"],
+        "answer": "varies"
+    },
+    {
+        "id": 12,
+        "code": "int a = 3, b = 7;\nprint(a * b + (a++ - --b));",
+        "options": ["varies","21","Error","Undefined"],
+        "answer": "varies"
+    }
+]

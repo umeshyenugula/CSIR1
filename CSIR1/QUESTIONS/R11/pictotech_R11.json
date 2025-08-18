@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "image": "static/images/1.jpg",
+    "answer": "Algorithm",
+    "options": ["Algorithm", "Function", "Variable", "Loop"]
+  },
+  {
+    "id": 2,
+    "image": "static/images/2.jpg",
+    "answer": "Database",
+    "options": ["Server", "Cloud", "Database", "API"]
+  },
+  {
+    "id": 3,
+    "image": "static/images/3.jpg",
+    "answer": "Wireshark",
+    "options": ["Wireshark", "Nmap", "Firewall", "VPN"]
+  },
+  {
+    "id": 4,
+    "image": "static/images/4.jpg",
+    "answer": "Brute Force",
+    "options": ["Brute Force", "Phishing", "Malware", "Spyware"]
+  },
+  {
+    "id": 5,
+    "image": "static/images/5.jpg",
+    "answer": "Dead Lock",
+    "options": ["Dead Lock", "Race Condition", "Segmentation Fault", "Memory Leak"]
+  },
+  {
+    "id": 6,
+    "image": "static/images/6.jpg",
+    "answer": "Garbage Collector",
+    "options": ["Garbage Collector", "Scheduler", "Debugger", "Compiler"]
+  },
+  {
+    "id": 7,
+    "image": "static/images/7.jpg",
+    "answer": "Darkweb",
+    "options": ["Darkweb", "Deep Web", "Surface Web", "Cloud"]
+  },
+  {
+    "id": 8,
+    "image": "static/images/8.jpg",
+    "answer": "Cryptography",
+    "options": ["Cryptography", "Encryption", "Compression", "Firewall"]
+  },
+  {
+    "id": 9,
+    "image": "static/images/9.jpg",
+    "answer": "Phishing",
+    "options": ["Phishing", "Spam", "Virus", "Trojan"]
+  },
+  {
+    "id": 10,
+    "image": "static/images/10.jpg",
+    "answer": "IP Address",
+    "options": ["IP Address", "MAC Address", "Subnet Mask", "DNS"]
+  }
+]
