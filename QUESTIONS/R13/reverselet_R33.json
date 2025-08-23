@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "question": "tropeni - Holds the address of another variable",
+    "answer": "pointer"
+  },
+  {
+    "id": 2,
+    "question": "rayar - Contiguous collection indexed by integers",
+    "answer": "array"
+  },
+  {
+    "id": 3,
+    "question": "fubfer - Temporary storage region for I/O or data",
+    "answer": "buffer"
+  },
+  {
+    "id": 4,
+    "question": "aprsre - Breaks source into tokens/structure (compiler component)",
+    "answer": "parser"
+  },
+  {
+    "id": 5,
+    "question": "relink - Combines object files into an executable",
+    "answer": "linker"
+  },
+  {
+    "id": 6,
+    "question": "ilevotal - Keyword that prevents certain compiler optimizations",
+    "answer": "volatile"
+  },
+  {
+    "id": 7,
+    "question": "lolbag - Variable accessible everywhere",
+    "answer": "global"
+  },
+  {
+    "id": 8,
+    "question": "ypfeetd - Creates type synonyms",
+    "answer": "typedef"
+  },
+  {
+    "id": 9,
+    "question": "tsac - Converts variable from one type to another",
+    "answer": "cast"
+  },
+  {
+    "id": 10,
+    "question": "ticsat - Persists value across function calls (storage class)",
+    "answer": "static"
+  }
+]

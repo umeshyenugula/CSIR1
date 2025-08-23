@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "code": "I can call myself until my work is done, But without a base case, I’ll run forever. What concept am I?",
+    "options": ["Recursion", "Loop", "Function", "Pointer"],
+    "answer": "Recursion"
+  },
+  {
+    "id": 2,
+    "code": "My truth is one, my lie is zero, And I live in the land of logic. What am I?",
+    "options": ["Binary", "Boolean", "Bit", "Switch"],
+    "answer": "Boolean"
+  },
+  {
+    "id": 3,
+    "code": "I store my first element at index 0, But my last element’s position is size minus one. What am I?",
+    "options": ["Array", "Stack", "Queue", "List"],
+    "answer": "Array"
+  },
+  {
+    "id": 4,
+    "code": "I’m the type of number divisible by exactly two numbers: 1 and myself. What am I?",
+    "options": ["Even Number", "Prime Number", "Odd Number", "Composite Number"],
+    "answer": "Prime Number"
+  },
+  {
+    "id": 5,
+    "code": "I decide which block of code will run Based on matching a single variable’s value to cases. What am I?",
+    "options": ["If–else", "Switch statement", "While loop", "Ternary operator"],
+    "answer": "Switch statement"
+  },
+  {
+    "id": 6,
+    "code": "I’m a C loop that will always run at least once before checking my condition. What am I?",
+    "options": ["For loop", "While loop", "Do...while loop", "Infinite loop"],
+    "answer": "Do...while loop"
+  },
+  {
+    "id": 7,
+    "code": "I’m a number that is equal to the sum of the cubes of my digits, like 153. What type of number am I?",
+    "options": ["Perfect number", "Armstrong number", "Prime number", "Even number"],
+    "answer": "Armstrong number"
+  },
+  {
+    "id": 8,
+    "code": "I decide between two values based on a condition, all in one compact line of C code. What operator am I?",
+    "options": ["Assignment operator", "Ternary (?:) operator", "Logical AND", "Equality operator"],
+    "answer": "Ternary (?:) operator"
+  },
+  {
+    "id": 9,
+    "code": "I hold a value with a name so you can find me later.",
+    "options": ["Function", "Object", "Variable", "Constant"],
+    "answer": "Variable"
+  },
+  {
+    "id": 10,
+    "code": "I never change once set—stone-cold and stubborn.",
+    "options": ["Variable", "Constant", "Operator", "Function"],
+    "answer": "Constant"
+  },
+  {
+    "id": 11,
+    "code": "Call me with inputs, I return results; reuse me to avoid repeats.",
+    "options": ["Function (or Method)", "Loop", "Array", "Class"],
+    "answer": "Function (or Method)"
+  },
+  {
+    "id": 12,
+    "code": "I choose one path or another based on a true/false test.",
+    "options": ["Switch case", "If–else (Conditional)", "Loop", "Goto"],
+    "answer": "If–else (Conditional)"
+  },
+  {
+    "id": 13,
+    "code": "I line up items by number, starting at 0 in many lands.",
+    "options": ["Stack", "Queue", "Array", "Dictionary"],
+    "answer": "Array"
+  },
+  {
+    "id": 14,
+    "code": "I grow and shrink easily; each item knows the next.",
+    "options": ["Stack", "Array", "Linked List", "Tree"],
+    "answer": "Linked List"
+  }
+]

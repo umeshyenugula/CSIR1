@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Image Quiz</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle, #0e0e1b, #000010);
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .header {
+      background: #141421;
+      padding: 25px;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #80ffec;
+      box-shadow: 0 0 25px #00ffee55;
+    }
+
+    .question-box {
+      margin: 40px auto;
+      width: 65%;
+      background: rgba(35, 35, 55, 0.95);
+      padding: 60px 60px;
+      border-radius: 40px;
+      text-align: center;
+      box-shadow: 0 0 30px #6fffe9;
+      border: 2px solid #6fffe980;
+      transition: all 0.3s ease;
+    }
+
+    .question {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 25px;
+      color: #ffe066;
+      text-shadow: 1px 1px #000;
+    }
+
+    .timer {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff4d4d;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .button {
+      background: linear-gradient(to right, #181828, #0f0f22);
+      border-radius: 25px;
+      padding: 16px 45px;
+      font-size: 1.2rem;
+      color: #6fffe9;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 20px #6fffe950;
+      transition: 0.3s ease;
+    }
+
+    .button:hover {
+      background: #6fffe9;
+      color: #000010;
+      box-shadow: 0 0 25px #6fffe9;
+    }
+
+    #resultBox {
+      margin-top: 60px;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    #resultHeader {
+      background: #6fffe9;
+      padding: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #111;
+      box-shadow: 0 0 20px #6fffe9;
+      border-radius: 20px 20px 0 0;
+    }
+
+    #resultMessage {
+      margin: 0 auto;
+      width: 60%;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 60px;
+      border-radius: 0 0 25px 25px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #6fffe9;
+      text-shadow: 1px 1px #000;
+      box-shadow: 0 0 20px #444;
+      white-space: pre-line;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">Sequence Event Round 1 - Image Quiz</div>
+
+<div class="question-box">
+  <div class="question" id="questionBox">
+    <img id="imageQuestion" src="" alt="Quiz Image" style="max-width: 100%; height: auto; border-radius: 20px;">
+  </div>
+  <div class="timer" id="timer">Time Left: 30s</div>
+  <form id="questionForm" onsubmit="return false;">
+    <input type="text" id="answerInput" placeholder="Type your answer..." autocomplete="off"
+      style="padding:10px; font-size:1.2rem; border-radius:10px; border:none; width:80%; text-align:center;">
+  </form>
+</div>
+
+<div class="footer">
+  <button class="button" onclick="submitAnswer()">Submit</button>
+</div>
+
+<div id="resultBox" style="display: none;">
+  <div id="resultHeader">
+    Result Of the Question
+  </div>
+  <div style="margin-top: 40px;">
+    <div id="resultMessage"></div>
+  </div>
+  <br>
+  <button class="button" onclick="window.location.href='/return'">Return to Dashboard</button>
+</div>
+
+<script>
+  let submitted = false;
+  let timer = 30;
+  let timerInterval;
+
+  function loadQuestion() {
+    // Reset the timer
+    clearInterval(timerInterval);
+    timer = 45;
+    document.getElementById("timer").textContent = `Time Left: ${timer}s`;
+
+    // Start the timer
+    timerInterval = setInterval(updateTimer, 1000);
+
+    fetch('/image/get-question')
+      .then(res => res.json())
+      .then(data => {
+        if (data.image) {
+          document.getElementById('imageQuestion').src = data.image;
+        } else {
+          alert("Failed to load the image.");
+        }
+
+        // Clear the answer input
+        document.getElementById('answerInput').value = "";
+        document.getElementById('answerInput').focus();
+
+        document.querySelector('.question-box').style.display = "block";
+        document.querySelector('.footer').style.display = "flex";
+        document.getElementById('resultBox').style.display = "none";
+
+        submitted = false;
+      });
+  }
+
+  function updateTimer() {
+    if (timer <= 0) {
+      clearInterval(timerInterval);
+      alert("Time's up! Your answer will be submitted.");
+      submitAnswer();
+    } else {
+      timer--;
+      document.getElementById("timer").textContent = `Time Left: ${timer}s`;
+    }
+  }
+
+  function playBeep() {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(800, audioCtx.currentTime);
+    gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+
+    oscillator.start();
+    oscillator.stop(audioCtx.currentTime + 0.3);
+  }
+
+  function submitAnswer() {
+    if (submitted) return;
+    submitted = true;
+
+    const userAnswer = document.getElementById('answerInput').value.trim();
+    if (!userAnswer) {
+      alert("Please enter your answer before submitting.");
+      submitted = false;
+      return;
+    }
+
+    fetch('/image/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ answer: userAnswer })
+    })
+    .then(res => res.json())
+    .then(response => {
+      const result = response.result;
+      const correctAnswer = response.correct;
+
+      playBeep();
+
+      let message = "";
+      let headerColor = "";
+
+      if (result === "correct") {
+        message = `✅ Correct!\n\nYour Answer: ${userAnswer}\nCorrect Answer: ${correctAnswer}`;
+        headerColor = "green";
+      } else {
+        message = `❌ Wrong!\n\nYour Answer: ${userAnswer}\nCorrect Answer: ${correctAnswer}`;
+        headerColor = "red";
+      }
+
+      document.querySelector('.question-box').style.display = "none";
+      document.querySelector('.footer').style.display = "none";
+
+      document.getElementById('resultBox').style.display = "block";
+      document.getElementById('resultHeader').style.backgroundColor = headerColor;
+      document.getElementById('resultMessage').textContent = message;
+    });
+  }
+
+  // prevent Enter key from submitting while typing
+  document.getElementById("answerInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault(); // stop form submission
+    }
+  });
+
+  // allow Enter to load next question only after result
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      if (document.getElementById('resultBox').style.display === "block") {
+        loadQuestion();
+      }
+    }
+  });
+
+  loadQuestion();
+</script>
+
+</body>
+</html>
