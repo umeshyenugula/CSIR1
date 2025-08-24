@@ -82,6 +82,32 @@
       box-shadow: 0 0 25px #6fffe9;
       border-color: #6fffe9;
     }
+.btn {
+  display: inline-block;
+  background: #1c1c2b;
+  border: 2px solid #6fffe9;
+  color: #6fffe9;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 20px 45px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00f0ff55;
+  transition: all 0.3s ease;
+  min-width: 110px;
+  user-select: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #6fffe9;
+  color: #0c0c16;
+  box-shadow: 0 0 25px #6fffe9;
+  border-color: #6fffe9;
+}
 
     @media (max-width: 480px) {
       main {
@@ -110,7 +136,7 @@
       <button type="submit" name="team_name" value="R12">R12</button>
       <button type="submit" name="team_name" value="R13">R13</button>
     </form>
-<a href="/credits"><button>View Credits</button></a>
+<a href="/credits" class="btn">View Credits</a>
   </main>
 </body>
 </html>
