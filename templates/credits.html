@@ -14,7 +14,6 @@
       background: radial-gradient(circle at center, #0f0f1b 0%, #0c0c16 100%);
       color: #f0f0f0;
       text-align: center;
-      overflow-x: hidden;
     }
 
     header {
@@ -22,26 +21,15 @@
       padding: 25px 10px;
       box-shadow: 0 0 20px #00ffee55;
     }
-
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       color: #6fffe9;
-      text-shadow: 1px 1px 4px #00ffeeb0;
-      margin: 0;
     }
 
     main {
       margin: 40px auto;
       max-width: 1000px;
       padding: 0 20px;
-    }
-
-    h2 {
-      font-size: 2rem;
-      color: #ffdb70;
-      margin-bottom: 30px;
-      text-shadow: 1px 1px 2px #000;
-      font-weight: 700;
     }
 
     .credits-container {
@@ -52,7 +40,7 @@
     }
 
     .credit-card {
-      width: 240px;
+      width: 220px;
       background: #1e1e2f;
       border: 2px solid #6fffe9cc;
       border-radius: 25px;
@@ -60,15 +48,14 @@
       padding: 20px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .credit-card:hover {
       transform: scale(1.08);
       box-shadow: 0 0 35px #00ffee;
     }
 
     .credit-card img {
-      width: 120px;
-      height: 120px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
       border: 3px solid #6fffe9;
       box-shadow: 0 0 15px #00ffee99;
@@ -77,99 +64,97 @@
     }
 
     .credit-name {
-      font-size: 1.4rem;
-      font-weight: 700;
+      font-size: 1.3rem;
       color: #6fffe9;
-      margin: 5px 0;
+      font-weight: 700;
     }
-
     .credit-role {
       font-size: 1rem;
       color: #ffdb70;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .credit-links a {
       color: #6fffe9;
-      margin: 0 10px;
+      margin: 0 8px;
       text-decoration: none;
-      font-size: 1.1rem;
-      transition: color 0.3s;
+      font-size: 1rem;
     }
-
     .credit-links a:hover {
       color: #ffdb70;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .credit-card {
-        width: 180px;
-        padding: 15px;
-      }
-      .credit-card img {
-        width: 100px;
-        height: 100px;
-      }
-      .credit-name {
-        font-size: 1.2rem;
-      }
+    .btn {
+      margin-top: 30px;
+      display: inline-block;
+      background: #1c1c2b;
+      border: 2px solid #6fffe9;
+      color: #6fffe9;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding: 15px 35px;
+      border-radius: 25px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
     }
-
-    @media (max-width: 480px) {
-      .credit-card {
-        width: 150px;
-        padding: 12px;
-      }
-      .credit-card img {
-        width: 90px;
-        height: 90px;
-      }
-      .credit-name {
-        font-size: 1rem;
-      }
-      .credit-role {
-        font-size: 0.85rem;
-      }
+    .btn:hover {
+      background: #6fffe9;
+      color: #0c0c16;
+      box-shadow: 0 0 25px #6fffe9;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Designers Credits</h1>
+    <h1>🎨 Designers Credits</h1>
   </header>
 
   <main>
-    <h2>Meet the Creators</h2>
     <div class="credits-container">
       <div class="credit-card">
-        <img src="static/images/umesh.jpg" alt="Designer Photo">
+        <img src="{{ url_for('static', filename='images/umesh.jpg') }}" alt="Designer">
         <div class="credit-name">Umesh C.Y</div>
         <div class="credit-role">Backend and UI Designer</div>
         <div class="credit-links">
           <a href="https://github.com/umeshyenugula" target="_blank">GitHub</a>
         </div>
       </div>
-
       <div class="credit-card">
-        <img src="static/images/sanjay.jpg" alt="Designer Photo">
+        <img src="{{ url_for('static', filename='images/sanjay.jpg') }}" alt="Designer">
         <div class="credit-name">Sanjay</div>
-        <div class="credit-role">Backend and Questions Designer</div>
+        <div class="credit-role">Backend and Question Query Developet</div>
         <div class="credit-links">
           <a href="https://github.com/" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
         </div>
-      </div>
-
-      <div class="credit-card">
-        <img src="static/images/dharvik.jpg" alt="Designer Photo">
-        <div class="credit-name">Dharvik Y</div>
-        <div class="credit-role">Questions Designer and Support</div>
+        <div class="credit-card">
+        <img src="{{ url_for('static', filename='images/x.jpg') }}" alt="Designer">
+        <div class="credit-name">Mallikarjun</div>
+        <div class="credit-role">Backend and Question Query Developer</div>
         <div class="credit-links">
-          <a href="https://github.com/dharvik-Y" target="_blank">Website</a>
+          <a href="https://github.com/umeshyenugula" target="_blank">GitHub</a>
+        </div>
+          <div class="credit-card">
+        <img src="{{ url_for('static', filename='images/y.jpg') }}" alt="Designer">
+        <div class="credit-name">Sandeep</div>
+        <div class="credit-role">Backend and Questions Query Developer</div>
+        <div class="credit-links">
+          <a href="https://github.com/umeshyenugula" target="_blank">GitHub</a>
+        </div>
+            <div class="credit-card">
+        <img src="{{ url_for('static', filename='images/dharvik.jpg') }}" alt="Designer">
+        <div class="credit-name">Dharvik Y</div>
+        <div class="credit-role">Backend ,Support and Testing</div>
+        <div class="credit-links">
+          <a href="https://github.com/umeshyenugula" target="_blank">GitHub</a>
         </div>
       </div>
-
     </div>
+
+    <!-- Back button -->
+    <a href="{{ url_for('index') }}" class="btn">⬅ Return to Main</a>
   </main>
 </body>
-  </html>
+</html>
