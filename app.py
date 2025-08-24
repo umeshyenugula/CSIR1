@@ -248,7 +248,10 @@ def returnback():
 @app.route("/returntomain")
 def returntomain():
     return render_template("index.html")
-
+# Credits Page route
+@app.route("/credits")
+def credits():
+    return render_template("credits.html")
 # Prevent double redirection by checking if the user is unlocked
 @app.before_request
 def require_unlock():
@@ -276,3 +279,4 @@ def open_browser_once():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
