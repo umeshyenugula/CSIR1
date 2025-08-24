@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Designer Credits</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at center, #0f0f1b 0%, #0c0c16 100%);
+      color: #f0f0f0;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #1e1e2f;
+      padding: 25px 10px;
+      box-shadow: 0 0 20px #00ffee55;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #6fffe9;
+      text-shadow: 1px 1px 4px #00ffeeb0;
+      margin: 0;
+    }
+
+    main {
+      margin: 40px auto;
+      max-width: 1000px;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #ffdb70;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px #000;
+      font-weight: 700;
+    }
+
+    .credits-container {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      flex-wrap: wrap;
+    }
+
+    .credit-card {
+      width: 240px;
+      background: #1e1e2f;
+      border: 2px solid #6fffe9cc;
+      border-radius: 25px;
+      box-shadow: 0 0 20px #6fffe9aa;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .credit-card:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 35px #00ffee;
+    }
+
+    .credit-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #6fffe9;
+      box-shadow: 0 0 15px #00ffee99;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .credit-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #6fffe9;
+      margin: 5px 0;
+    }
+
+    .credit-role {
+      font-size: 1rem;
+      color: #ffdb70;
+      margin-bottom: 15px;
+    }
+
+    .credit-links a {
+      color: #6fffe9;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    .credit-links a:hover {
+      color: #ffdb70;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .credit-card {
+        width: 180px;
+        padding: 15px;
+      }
+      .credit-card img {
+        width: 100px;
+        height: 100px;
+      }
+      .credit-name {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .credit-card {
+        width: 150px;
+        padding: 12px;
+      }
+      .credit-card img {
+        width: 90px;
+        height: 90px;
+      }
+      .credit-name {
+        font-size: 1rem;
+      }
+      .credit-role {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Designers Credits</h1>
+  </header>
+
+  <main>
+    <h2>Meet the Creators</h2>
+    <div class="credits-container">
+      <div class="credit-card">
+        <img src="static/images/umesh.jpg" alt="Designer Photo">
+        <div class="credit-name">Umesh C.Y</div>
+        <div class="credit-role">Backend and UI Designer</div>
+        <div class="credit-links">
+          <a href="https://github.com/umeshyenugula" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="credit-card">
+        <img src="static/images/designer2.jpg" alt="Designer Photo">
+        <div class="credit-name">Sanjay</div>
+        <div class="credit-role">Backend and Questions Designer</div>
+        <div class="credit-links">
+          <a href="https://github.com/" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <div class="credit-card">
+        <img src="static/images/dharvik.jpg" alt="Designer Photo">
+        <div class="credit-name">Dharvik Y</div>
+        <div class="credit-role">Questions Designer and Support</div>
+        <div class="credit-links">
+          <a href="https://github.com/dharvik-Y" target="_blank">Website</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+  </html>
